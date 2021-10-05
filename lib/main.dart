@@ -1,6 +1,9 @@
+import 'package:awesome_app/routes/routes.dart';
+import 'package:awesome_app/screens/forms.dart';
+import 'package:awesome_app/screens/home.dart';
+import 'package:awesome_app/screens/images_icons.dart';
+import 'package:awesome_app/screens/stack_example.dart';
 import 'package:flutter/material.dart';
-
-import 'screens/stack_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +20,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const StackScreen(),
+      home: Home(),
+      routes: {
+        Routes.login: (context) => const StackScreen(),
+        Routes.forms: (context) => FormScreen(),
+        Routes.imagesicons: (context) => ImagesAndIcons(),
+      },
     );
   }
 }

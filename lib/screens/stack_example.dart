@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 class StackScreen extends StatefulWidget {
   const StackScreen({Key? key}) : super(key: key);
+  static const routeName = '/stack';
 
   @override
   _StackScreenState createState() => _StackScreenState();
